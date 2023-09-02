@@ -1,0 +1,92 @@
+
+###
+
+
+GET http://localhost:4000/
+
+###
+
+GET http://localhost:4000/post
+Authorization: barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDk5NGNmOGE5OWJiMzI5NDJhOWMzZCIsImlhdCI6MTY0ODk5ODg3NSwiZXhwIjoxNjQ4OTk4OTA1fQ.-mrojaAouk7KTz85PJZaZV_G4JdgRZME1HQoiwYB21o
+###
+
+POST  http://localhost:4000/post
+Authorization: barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDk5NGNmOGE5OWJiMzI5NDJhOWMzZCIsImlhdCI6MTY0ODk5OTMwNCwiZXhwIjoxNjQ5MDAyOTA0fQ.buJEcvpu0B3uvsLFREnIVDeed1qgZ-FNc7JajOjOmSM
+Content-Type: application/json
+
+{
+    "message": "this is my auth11  new post",
+    "sender": "amit"
+}
+###
+
+GET http://localhost:4000/post/623f10f394565640ec023b89
+
+###
+
+POST  http://localhost:4000/user
+Content-Type: application/json
+
+{
+    "userName": "amitmes",
+    "password": "123456",
+    "email": "a@walla.com",
+    "phoneNumber": "0541234567"
+}
+
+###
+POST  http://localhost:4000/user/login
+Content-Type: application/json
+
+{
+    "userName": "amitmes",
+    "password": "123456"
+}
+###
+
+POST  http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "userName": "gal",
+    "password": "123456",
+    "email": "gal@walla.com",
+    "phoneNumber": "0541234567"
+}
+
+###
+
+POST  http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "userName": "gal",
+    "password": "123456"
+}
+
+###
+
+POST  http://localhost:4000/auth/logout
+Content-Type: application/json
+
+{
+    "message": "this is my new post",
+    "sender": "amit"
+}
+
+###
+
+POST   http://localhost:4000/post/getAllPosts
+
+###
+
+GET   http://localhost:4000/location/getAllLocations
+
+###
+
+POST   http://localhost:4000/post/getPostsbyUsername
+Content-Type: application/json
+
+{
+    "userName": "amit"
+}
